@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="card animate animated fadeIn" style="text-align:center; margin-top:1em" *ngIf="this.submitted == false">
+        <div class="card-header">
+          <h4>Report A Listing</h4>
+                    <br/>
+          <h5 style="font-size:14px;">Disclaimer:</h5>
+          <p style="font-size:12px;">
+            If these individuals require immediate medical attention or possess a public safety risk, please contact the relevant authorities instead.
+            <br/>For medical attention, call 995.
+            <br/>For public safety risk, call 999.
+          </p>
+        </div>
+        <div class="card-body" style="margin-left:2em; margin-right:2em;">
+          <form>
+            <div class="form-group">
+              <label for="">Name</label>
+              <input type="" class="form-control" id="" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <input type="" class="form-control" id="" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="">Description</label>
+              <input type="" class="form-control" id="" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="">Your Location</label>
+              <input type="" class="form-control" id="" placeholder="" value="{{lat}},{{lon}}" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">No of People</label>
+              <input type="number" class="form-control" id="" placeholder="" (change)="generatePeople()" [(ngModel)]="peopleCount" name="peopleCount">
+            </div>
+            <div class="form-group">
+              <label for="">Description</label>
+              <textarea class="form-control" rows="4"></textarea>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary btn-block" (click)="submitForm()">Submit</button>
+          </form>
+        </div>
+    </div>
+
+    <div>
+      <div class="animate animated fadeIn" style="text-align:center; margin-top:15em;" *ngIf="this.submitted == true">
+        <h2>Thank you for your help!</h2>
+        <h6>Do subscribe and sign up for our cause.</h6>
+        <br/>
+        <button class="btn btn-primary btn-lg" [routerLink]="['/login']">Sign Up</button>
+        &nbsp;&nbsp;
+        <button class="btn btn-secondary btn-lg" [routerLink]="['/donation']">Donate</button>
+      </div>
+    </div>
+
+</div>

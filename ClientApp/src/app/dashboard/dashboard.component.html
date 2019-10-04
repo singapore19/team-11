@@ -1,0 +1,28 @@
+<div class="sidenav animate animated fadeInLeft">
+  <br/><br/>
+  <div class="card" *ngFor="let sighting of sightings">
+    <div class="card-body">
+    <h6>Sighted By: {{ sighting.name }}</h6>
+    <h6>Phone Number: {{ sighting.phone_number }}</h6>
+    <h6>Number of People:{{ sighting.num_of_people }}</h6>
+    <p>Description:{{ sighting.description }}</p>
+    <p>{{ sighting.loc_details }}</p>
+    <button class="btn btn-primary" *ngIf="sighting.attended == false">Attend</button>
+    <h6 *ngIf="sighting.attended == true">Status: Attended</h6>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="position:relative">
+    <div class="animate animated fadeIn" >
+      <div  style="height: 89vh; width: 185vh;"
+         leaflet
+         [leafletOptions]="options"
+         [leafletLayers]="layers"
+         >
+       </div>
+    </div>
+
+    <a class="btn btn-primary" style="position:absolute; right:0; bottom: 3em" href="/assets/img/bg.jpg" download>Download Report</a>
+
+</div>

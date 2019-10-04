@@ -1,0 +1,46 @@
+<div class="container" style="text-align:center">
+  <!-- <div class="row" style="padding-top:5em"> -->
+  <br>
+    <div class="card animate animated fadeIn" style="text-align:center;">
+      <div class="card-body">
+        <h5>Hours Clocked:</h5><h1>100</h1>
+      </div>
+    </div>
+    <br>
+    <div class="card animate animated fadeIn" style="text-align:center;" >
+      <div class="card-body">
+        <h5>Your Points:</h5><h1>9001 Pts.</h1>
+      </div>
+    </div>
+
+  <hr/>
+  <br/>
+  <h5>Nightwalk Events</h5>
+  <br/>
+
+<div [ngSwitch]="view" class="animate animated fadeIn">
+  <mwl-calendar-month-view
+    *ngSwitchCase="'month'"
+    [viewDate]="viewDate"
+    [events]="events"
+    [activeDayIsOpen]="true"
+    (eventClicked)="eventClicked($event)"
+  >
+  </mwl-calendar-month-view>
+  <mwl-calendar-week-view
+    *ngSwitchCase="'week'"
+    [viewDate]="viewDate"
+    [events]="events"
+    (eventClicked)="eventClicked($event)"
+  >
+  </mwl-calendar-week-view>
+  <mwl-calendar-day-view
+    *ngSwitchCase="'day'"
+    [viewDate]="viewDate"
+    [events]="events"
+    (eventClicked)="eventClicked($event)"
+  >
+  </mwl-calendar-day-view>
+
+  <br/><br/>
+</div>
