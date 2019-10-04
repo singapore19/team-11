@@ -4318,10 +4318,16 @@
       "links": {},
       "address": "0xd702181144c8E6E2599FcA997B134DbE597F4AE1",
       "transactionHash": "0x85b2571995c6841bc2836b051ab5e83de3d8279ba6a252928a797d7daa877fa0"
+    },
+    "1570175125829": {
+      "events": {},
+      "links": {},
+      "address": "0xd24a5082525D0262bf1cBAB441feF2e39a18055e",
+      "transactionHash": "0x843ba103cf51522175a336e4e896357ab188a343c7ebead0c03062e4ed19c9f5"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-10-04T06:44:47.449Z",
+  "updatedAt": "2019-10-04T07:46:42.762Z",
   "devdoc": {
     "methods": {}
   },
